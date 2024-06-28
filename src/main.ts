@@ -1,3 +1,6 @@
 import regester from './sw?sw'
-
-console.log(regester({}))
+;(async () => {
+  const regestered = await regester({})
+  await regestered.unregister()
+  await regester({})
+})()
